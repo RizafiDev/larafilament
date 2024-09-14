@@ -1,12 +1,25 @@
 <?php
 
 return [
-    'navigation' => [
+    'default' => [
+        'path' => 'admin',
+        'name' => 'Admin Panel',
         'resources' => [
-            'content' => [
-                'label' => 'Account Management',
-                'icon' => 'heroicon-o-circle-stack',
-            ],
+            // Daftar resources untuk admin
+        ],
+        'widgets' => [
+            // Daftar widgets untuk admin
+        ],
+    ],
+
+    'artist' => [
+        'path' => 'artist',
+        'name' => 'Artist Panel',
+        'resources' => [
+            // Daftar resources untuk artist
+        ],
+        'widgets' => [
+            // Daftar widgets untuk artist
         ],
     ],
 ];

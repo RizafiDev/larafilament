@@ -37,10 +37,10 @@ class UserResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Select::make('role')
+                ->default('ARTIST')
                 ->options(
                     User::ROLES
                 )
-                    ->required()
 
             ]);
     }
