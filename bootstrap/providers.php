@@ -2,7 +2,7 @@
 
 return [
     App\Providers\AppServiceProvider::class,
-    App\Providers\FilamentServiceProvider::class,
     App\Providers\Filament\AdminPanelProvider::class,
-    App\Providers\Filament\ArtistPanelPanelProvider::class,
+    App\Providers\Filament\ArtistPanelProvider::class,
+    App\Providers\Filament\ArtistPanelProvider::class,
 ];

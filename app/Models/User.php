@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Panel;
+use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -10,7 +12,7 @@ use Illuminate\Notifications\Notifiable;
 
 
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
     use HasFactory, Notifiable;
 
@@ -25,6 +27,15 @@ const ROLES = [
     self::ROLE_ARTIST => 'Artist',
 ];
 
+
+public function canAccessPanel(Panel $panel): bool{
+   return $this->role == 'ADMIN';
+// if ($this->role == 'ADMIN'){
+//     return true;
+// }else{
+//     false;
+// }
+}
     /**
      * The attributes that are mass assignable.
      *
